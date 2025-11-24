@@ -101,3 +101,72 @@ function ContinueButton({Screen}: {Screen: () => void}){
 
   );
 }
+
+type CreateEventProps = {
+    goHome: () => void;
+};
+export function CreateEvent({goHome}: CreateEventProps){
+    const [title, setTitle] = useState("");
+    const [date, setDate] = useState("");
+    const [notes, setNotes] = useState("");
+    const handleSave = () => {
+        if (!title || !date){
+            Alert.alert("ERROR", "Title and Date are required!");
+            return;
+        }
+        
+        console.log("New Event Created:", {title,date, notes});
+        goHome();
+    };
+    return(
+           <View
+           style={{
+               width: 400, height: 760, alignSelf: "center", borderWidth: 2, borderColor: "black", backgroundColor: "white", padding: 20
+           }}>
+           <Text style={{
+               fontSize: 28, textAlign: "center", marginBottom: 20
+           }}>
+           Create New Event
+           </Text>
+           <Text style={{ fontSize: 18
+           }}>Event Title</Text</Text>
+           <TextInput
+            placeholder = "Enter event name"
+            value = {title}
+            onChangeText = {setTitle}
+           style = {{ borderWidth: 1, borderColor; "gray", padding: 10, marginBottom: 20
+           }}
+           />
+           
+           <Text style = {{fontSize: 18
+           }}>Date</Text>
+           <TextInput
+            placeholder = "MM-DD-YYYY"
+           value = {date}
+           onChangeText = {setDate}
+           style = {{
+               borderWidth: 1, borderColor: "gray", padding: 10, marginBottom: 20
+           }}
+           />
+           
+           <Text style = {{ fontSize: 18
+           }}>Notes (optional)</Text>
+           <TextInput
+            placeholder = "Description"
+           value = {notes}
+           onChangeText = {setNotes}
+           multiline
+           
+           style = {{
+               borderWidth: 1, borderColor: "gray", padding: 10, height: 100, textAlignVertical: "top", marginBottom: 30
+           }}
+           />
+           
+           <Button title = "Add Event" onPress = {handleSave} />
+           <View style = {{ marginTop: 20
+           }}>
+           Button title = "Cancel" onPress = {goHome} />
+           </View>
+           </View>
+           );
+}
