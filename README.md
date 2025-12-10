@@ -54,7 +54,7 @@ https://nodejs.org/
 
 Verify installation:
 
-```bash
+
 node -v
 npm -v
 2. Install Expo CLI
@@ -63,6 +63,7 @@ Copy code
 npm install -g expo-cli
 📦 Install Project Dependencies
 From the project root, run:
+
 
 1. Install Expo & Core Packages
 bash
@@ -94,7 +95,7 @@ npx expo install expo-linear-gradient
 npx expo install @expo/vector-icons
 
 
-##☁️ Firebase Setup
+## ☁️ Firebase Setup
 1. Create Firebase Project
 Go to:
 https://console.firebase.google.com
@@ -120,7 +121,7 @@ FIREBASE_MESSAGING_SENDER_ID=your-id
 FIREBASE_APP_ID=your-app-id
 
 
-##▶️ Running the App
+## ▶️ Running the App
 From the project root directory:
 
 bash
@@ -133,7 +134,7 @@ Copy code
 expo start
 
 
-##📱 Run on Device
+## 📱 Run on Device
 iOS
 bash
 Copy code
@@ -148,7 +149,7 @@ Copy code
 w
 
 
-##🧠 Architecture Overview
+## 🧠 Architecture Overview
 scss
 Copy code
 UI (app/)
@@ -163,7 +164,7 @@ Auth Flow:
 Auth Screen → authService.ts → Firebase Auth
 
 
-##🧪 Development Tips
+## 🧪 Development Tips
 Clear Expo cache:
 
 bash
