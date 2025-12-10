@@ -68,14 +68,20 @@ From the project root, run:
 bash
 Copy code
 npx expo install react react-native expo
+
+
 2. Install Expo Router
 bash
 Copy code
 npx expo install expo-router react-native-screens react-native-safe-area-context
+
+
 3. Install Firebase SDK
 bash
 Copy code
 npm install firebase
+
+
 4. Install Zustand (State Management)
 bash
 Copy code
@@ -86,7 +92,9 @@ Copy code
 npx expo install react-native-calendars
 npx expo install expo-linear-gradient
 npx expo install @expo/vector-icons
-☁️ Firebase Setup
+
+
+##☁️ Firebase Setup
 1. Create Firebase Project
 Go to:
 https://console.firebase.google.com
@@ -110,7 +118,9 @@ FIREBASE_PROJECT_ID=your-project-id
 FIREBASE_STORAGE_BUCKET=your-bucket
 FIREBASE_MESSAGING_SENDER_ID=your-id
 FIREBASE_APP_ID=your-app-id
-▶️ Running the App
+
+
+##▶️ Running the App
 From the project root directory:
 
 bash
@@ -121,7 +131,9 @@ OR (if Expo CLI is installed globally):
 bash
 Copy code
 expo start
-📱 Run on Device
+
+
+##📱 Run on Device
 iOS
 bash
 Copy code
@@ -134,7 +146,9 @@ Web
 bash
 Copy code
 w
-🧠 Architecture Overview
+
+
+##🧠 Architecture Overview
 scss
 Copy code
 UI (app/)
@@ -147,7 +161,9 @@ Firestore Database
 
 Auth Flow:
 Auth Screen → authService.ts → Firebase Auth
-🧪 Development Tips
+
+
+##🧪 Development Tips
 Clear Expo cache:
 
 bash
